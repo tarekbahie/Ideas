@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		472CDAF6220064F1009A997F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CDAF5220064F1009A997F /* AppDelegate.swift */; };
-		472CDAF8220064F1009A997F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CDAF7220064F1009A997F /* ViewController.swift */; };
 		472CDAFB220064F1009A997F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472CDAF9220064F1009A997F /* Main.storyboard */; };
 		472CDAFE220064F1009A997F /* Ideas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 472CDAFC220064F1009A997F /* Ideas.xcdatamodeld */; };
 		472CDB00220064F3009A997F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472CDAFF220064F3009A997F /* Assets.xcassets */; };
 		472CDB03220064F3009A997F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472CDB01220064F3009A997F /* LaunchScreen.storyboard */; };
+		472CDB0F22006750009A997F /* NotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CDB0E22006750009A997F /* NotesVC.swift */; };
+		472CDB1322008F97009A997F /* UpdateNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472CDB1222008F97009A997F /* UpdateNotesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		472CDAF2220064F1009A997F /* Ideas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ideas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		472CDAF5220064F1009A997F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		472CDAF7220064F1009A997F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		472CDAFA220064F1009A997F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		472CDAFD220064F1009A997F /* Ideas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ideas.xcdatamodel; sourceTree = "<group>"; };
 		472CDAFF220064F3009A997F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		472CDB02220064F3009A997F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472CDB04220064F3009A997F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472CDB0E22006750009A997F /* NotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesVC.swift; sourceTree = "<group>"; };
+		472CDB1222008F97009A997F /* UpdateNotesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNotesVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		472CDAF4220064F1009A997F /* Ideas */ = {
 			isa = PBXGroup;
 			children = (
-				472CDAF5220064F1009A997F /* AppDelegate.swift */,
-				472CDAF7220064F1009A997F /* ViewController.swift */,
-				472CDAF9220064F1009A997F /* Main.storyboard */,
-				472CDAFF220064F3009A997F /* Assets.xcassets */,
-				472CDB01220064F3009A997F /* LaunchScreen.storyboard */,
+				472CDB0C22006513009A997F /* Model */,
+				472CDB0B2200650C009A997F /* View */,
+				472CDB0A22006504009A997F /* Controller */,
+				472CDB0D220066C3009A997F /* Supporting files */,
 				472CDB04220064F3009A997F /* Info.plist */,
-				472CDAFC220064F1009A997F /* Ideas.xcdatamodeld */,
 			);
 			path = Ideas;
+			sourceTree = "<group>";
+		};
+		472CDB0A22006504009A997F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				472CDAF5220064F1009A997F /* AppDelegate.swift */,
+				472CDB0E22006750009A997F /* NotesVC.swift */,
+				472CDB1222008F97009A997F /* UpdateNotesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		472CDB0B2200650C009A997F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				472CDAF9220064F1009A997F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		472CDB0C22006513009A997F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				472CDAFC220064F1009A997F /* Ideas.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		472CDB0D220066C3009A997F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				472CDAFF220064F3009A997F /* Assets.xcassets */,
+				472CDB01220064F3009A997F /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				472CDAFE220064F1009A997F /* Ideas.xcdatamodeld in Sources */,
-				472CDAF8220064F1009A997F /* ViewController.swift in Sources */,
+				472CDB0F22006750009A997F /* NotesVC.swift in Sources */,
 				472CDAF6220064F1009A997F /* AppDelegate.swift in Sources */,
+				472CDB1322008F97009A997F /* UpdateNotesVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQLDC32ZJ8;
 				INFOPLIST_FILE = Ideas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQLDC32ZJ8;
 				INFOPLIST_FILE = Ideas/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
